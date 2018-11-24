@@ -36,13 +36,13 @@
                     <ul class="navbar-nav mr-auto">
 
                         @can('products.index')
-                        <li class="nav-item">
+                        <li class="nav-item {{ request()->is('products') ? 'active btn btn-white  btn-block btn-sm border-success' : '' }}">
                             <a class="nav-link" href="{{ route('products.index') }}">Productos</a>
                         </li>
                         @endcan
 
                         @can('roles.index')
-                        <li class="nav-item">
+                        <li class="nav-item {{ request()->is('/roles') ? 'active' : '' }}">
                             <a class="nav-link" href="{{ route('roles.index') }}">Roles</a>
                         </li>
                         @endcan
